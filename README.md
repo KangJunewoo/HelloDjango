@@ -30,3 +30,14 @@
 linter는 flake8 formatter는 black을 쓰고 있구나.  
 처음 써봐서 좋은 지는 잘 모르겠다.  
 또한 장고 공홈을 보는 습관을 들이자.  
+
+## 에러고치면서 배우기
+### user모델 변경하려고 할 때 migration 순서 오류
+최대한 순수한 상태로 돌아가
+```
+python manage.py migrate admin zero
+python manage.py migrate auth zero
+python manage.py migrate contenttypes zero
+python manage.py migrate sessions zero
+```
+로 싹 초기화해준 담에 진행.
