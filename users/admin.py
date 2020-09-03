@@ -3,10 +3,10 @@ from django.contrib.auth.admin import UserAdmin
 from . import models
 
 
-# Register your models here.
-# 튜플 구성 주의할것! 쉽표 마지막에 안달아주면 그냥 string으로 인식함.
+# 스무스하게 models.py에서 바꾼 User 등록해주자.
 @admin.register(models.User)
-class CustomUserAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin):  # admin 패널에도 변화를 줄 수 있음. 안할거면 pass
+    # 기존 필드 + 바나나필드에 새로 정의한 항목들 넣어버리기
     fieldsets = UserAdmin.fieldsets + (
         (
             "Banana",

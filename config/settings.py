@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# 유저앱 싹 넣어주고
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -118,5 +118,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
 STATIC_URL = "/static/"
-AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "users.User"  # 잊지맙시다!

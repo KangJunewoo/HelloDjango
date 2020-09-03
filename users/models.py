@@ -2,9 +2,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-# Create your models here.
+# 여기서 유저를 커스터마이징했음. AbstractUser를 상속하니 기본적인 틀은 유지되는듯.
 class User(AbstractUser):
-
     GENDER_MALE = "male"
     GENDER_FEMALE = "female"
     GENDER_OTHER = "other"
@@ -25,6 +24,7 @@ class User(AbstractUser):
 
     CURRENCY_CHOICES = ((CURRENCY_USD, "USD"), (CURRENCY_KRW, "KRW"))
 
+    # 이 쪽 항목들을 더 추가하는 거지.
     avatar = models.ImageField(blank=True)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)
     bio = models.TextField(blank=True)
