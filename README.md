@@ -74,9 +74,10 @@ python manage.py migrate sessions zero
 ### 튜플 사용시 마지막에 쉼표를 달아주자
 - element 한개짜리 튜플이면 string으로 인식될수도 있다.
 
-### no such table
+### no such table / no such column
 ```
 python manage.py migrate --run-syncdb
 ```
 db랑 뭔가 안맞아서 그런듯.. 뭔가 잡기술만 늘어가는 기분 ㅋㅋ  
 서버를 계속 돌리고 있으면 안되겠다 그러면 싱크가 안맞게됨.
+아니 근데 왜 자꾸 나지...?
